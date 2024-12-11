@@ -1,15 +1,12 @@
 "use client";
 
-import SearchBar from "../components/SearchBar";
+import SearchPage from "@/components/Search";
 
 export default function Home() {
-  const handleSearch = (query: string) => {
-    console.log("Searching for:", query);
-  };
 
   return (
-    <div className="p-4">
-      <SearchBar onSearch={handleSearch} />
+    <div className="mx-auto px-4 md:px-6 lg:px-8 max-w-6xl">
+      <SearchPage />
     </div>
   );
 }
