@@ -1,11 +1,16 @@
-export async function getRelevantContent(embedding: number[]) {
+type SearchType = "keyword" | "semantic" | "hybrid";
+
+export async function getRelevantContent(
+  query: string,
+  searchType: SearchType
+) {
   try {
     const response = await fetch("/api/search", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ embedding }),
+      body: JSON.stringify({ query, searchType }),
     });
 
     if (!response.ok) {

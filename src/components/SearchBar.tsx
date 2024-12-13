@@ -12,7 +12,7 @@ interface Metadata {
   // TO-DO: Add other metadata fields if needed
 }
 
-// Main Match interface matching the structure
+// Match interface matching the structure
 export interface Match {
   id: string;
   score: number;
